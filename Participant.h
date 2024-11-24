@@ -17,8 +17,7 @@ public:
 	inline int getEnergie() const;
 	inline int getPositionX() const;
 	inline int getPositionY() const;
-	virtual int fournirPonderation() const = 0;
-	virtual bool toujoursEnAction() const = 0;
+
 	
 protected:
 	inline void ModifierEnergie(int quantite);

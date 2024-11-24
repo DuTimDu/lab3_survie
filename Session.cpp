@@ -13,7 +13,7 @@ using namespace std;
 Session::Session(string sigle, int niveau)
 {
 	srand(time(NULL));
-
+	
 	this->sigle = sigle;
 	this->niveau = niveau;
 	participants = new Participant * *[niveau];
@@ -26,7 +26,7 @@ Session::Session(string sigle, int niveau)
 	enCours = true;
 	initialiserDevoirs();
 	initialiserEtudiant();
-
+	Journalisation::sauvegarder(this);
 }
 
 Session::~Session()

@@ -9,12 +9,9 @@ public:
 	{
 		return 5;
 	}
-	bool toujoursEnAction() const override
-	{
-		return true;
-	}
 };
 
 Devoir3Inconnu::Devoir3Inconnu(int px, int py) : Devoir('I', 5, px, py)
 {
+	Journalisation::sauvegarder(this);
 }

@@ -4,17 +4,17 @@ class Etudiant : public Participant
 {
 public:
     inline Etudiant( int px, int py, int energie);
-    inline bool toujoursEnAction() const override;
+    inline bool toujoursEnAction() const;
     inline void subirEchec();
     inline void reussirDevoir(int energie);
     inline void setNouvellePosition(int x, int y);
-    inline int fournirPonderation() const override;
     inline int getX() const; 
     inline int getY() const;
 };
 
 Etudiant::Etudiant( int px, int py, int energie) : Participant('E', px, py, energie)
 {
+    Journalisation::sauvegarder(this);
 }
 
 bool Etudiant::toujoursEnAction() const
@@ -36,11 +36,6 @@ void Etudiant::setNouvellePosition(int x, int y)
 {
     setX(x);
     setY(y);
-}
-
-int Etudiant::fournirPonderation() const
-{
-    return 0;
 }
 
 int Etudiant::getX() const

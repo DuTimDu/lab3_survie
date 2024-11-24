@@ -2,16 +2,16 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <typeinfo>
 using namespace std;
+
 class Journalisation
 {
 public:
-	static void sauvegarder(const Session* session);
-	
-};
-
-void Journalisation::sauvegarder(const Session* session)
-{
+	template <typename T>
+	static void sauvegarder(T* obj)
+	{
 	ofstream monFichier("survie.txt", std::ios::app);
-	monFichier << typeid(session).name() << endl;
+	monFichier << typeid(*obj).name() << endl;
+	}
 };

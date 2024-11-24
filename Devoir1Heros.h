@@ -8,12 +8,9 @@ public:
 	{
 		return 1;
 	}
-	bool toujoursEnAction() const override
-	{
-		return true;
-	}
 };
 
 Devoir1Heros::Devoir1Heros(int px, int py) : Devoir('H', 1, px, py)
 {
+	Journalisation::sauvegarder(this);
 }

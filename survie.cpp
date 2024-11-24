@@ -1,6 +1,6 @@
 
-// Auteurs: Timothé DURAND DURT07072004
-//          Gaetan Darrot DARG09072002
+// Auteurs: Timothé DURAND DURT07070400
+//          Gaetan Darrot DARG21020300
 
 
 
@@ -8,12 +8,14 @@
 #include "Session.h"
 
 int main() {
+    printf( "Gaetan DARRORT\n"
+            "Timothe DURAND\n");
     int niveau;
     cout << "Entrez le niveau de la session (taille du tableau) : ";
     cin >> niveau;
 
     Session session("a2024", niveau); 
-
+	
 
     do {
         cout << session << endl;

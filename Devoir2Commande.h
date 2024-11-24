@@ -9,12 +9,9 @@ public:
 	{
 		return 3;
 	}
-	bool toujoursEnAction() const override
-	{
-		return true;
-	}
 };
 
 Devoir2Commande::Devoir2Commande(int px, int py) : Devoir('C', 3, px, py)
 {
+	Journalisation::sauvegarder(this);
 }
